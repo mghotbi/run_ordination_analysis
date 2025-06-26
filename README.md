@@ -18,7 +18,7 @@ source("run_ordination_analysis.R")
 
 ```r
 
-source("https://raw.githubusercontent.com/mghotbi/run_ordination_analysis/main/run_ordination_analysis.R")
+source("https://raw.githubusercontent.com/mghotbi/run_ordination_analysis/Rhizosphere-nitrogen-fate/run_ordination_analysis.R")
 
 ```
 
