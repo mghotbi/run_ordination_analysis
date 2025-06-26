@@ -15,6 +15,7 @@ You can source the R script directly from your local folder:
 source("run_ordination_analysis.R")
 
 ```
+OR from
 
 ```r
 
