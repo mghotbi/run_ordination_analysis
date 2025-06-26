@@ -26,12 +26,12 @@ source("https://raw.githubusercontent.com/mghotbi/run_ordination_analysis/Rhizos
 
 ```r
 result <- run_ordination_analysis(
-  ps_obj = ps_16s,
-  marker_label = "Prokaryotic Community",
-  group_var = "Treatment",
-  interaction_var = "Genotype",
-  replicate_var = "Replicate",
-  treatment_levels = c("Control", "Flooding", "Herbivory", "DualStress"))
+  ps_obj = ps_16s, #phyloseq obj
+  marker_label = "Prokaryotic Community", #fig label
+  group_var = "Treatment", #factor1
+  interaction_var = "Genotype", #factor2
+  replicate_var = "Replicate", #block/Rep
+  treatment_levels = c("Control", "Flooding", "Herbivory", "DualStress")) # group_var levels
 
   result$plot
  print(result$permanova)
