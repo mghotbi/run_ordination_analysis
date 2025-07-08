@@ -15,12 +15,12 @@
 # Required Packages:
 # phyloseq, vegan, ggplot2, dplyr, ggpubr, patchwork, tibble
 
-run_ordination_analysis <- function(ps_obj, 
-                                    marker_label = "Community",
-                                    group_var = "Group",
-                                    interaction_var = "SubGroup",
-                                    replicate_var = "Replicate",
-                                    treatment_levels = NULL) {
+process_ordination_general <- function(ps_obj,
+                                       title_label = "Ordination Plot",
+                                       group_var = "Group",
+                                       interaction_var = "SubGroup",
+                                       replicate_var = "Replicate",
+                                       treatment_levels = NULL) {
   
   set.seed(23465)
   
