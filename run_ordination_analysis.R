@@ -101,11 +101,11 @@ process_ordination_general <- function(ps_obj, title_label = "Ordination Plot", 
     ) %>%
     filter(!is.na(GroupVar)) %>%
     droplevels()
-  
+
   meta_df <- ord_df %>%
-    select(SampleID, GroupVar, all_of(group_var), all_of("Genotype"), all_of("Replicate")) %>%
-    distinct()
-  
+  select(SampleID, GroupVar, all_of(group_var), all_of(interaction_var), all_of(replicate_var)) %>%
+  distinct()
+
   rownames(meta_df) <- meta_df$SampleID
   
   dist_matrix <- as.matrix(dist_bc)[rownames(meta_df), rownames(meta_df)]
