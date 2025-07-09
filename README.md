@@ -34,8 +34,7 @@ result <- run_ordination_analysis(
   group_var = "Condition",
   interaction_var = "Wheat",
   replicate_var = "Replicate",
-  treatment_levels = c("Optimum", "Drought", "Heat", "Drought+Heat")
-)
+  treatment_levels = c("Optimum", "Drought", "Heat", "Drought+Heat"))
 
 # View the plot and PERMANOVA
 result$plot
