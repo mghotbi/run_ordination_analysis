@@ -25,15 +25,21 @@ source("https://raw.githubusercontent.com/mghotbi/run_ordination_analysis/Rhizos
 
 
 ```r
-result <- run_ordination_analysis(
-  ps_obj = ps_16s, #phyloseq obj
-  marker_label = "Prokaryotic Community", #fig label
-  group_var = "Treatment", #factor1
-  interaction_var = "Genotype", #factor2
-  replicate_var = "Replicate", #block/Rep
-  treatment_levels = c("Control", "Flooding", "Herbivory", "DualStress")) # group_var levels
 
-  result$plot
- print(result$permanova)
+# Load your normalized phyloseq object (ps_16s_norm) # normalization_set function in DspikeIn package
+
+result <- run_ordination_analysis(
+  ps_obj = ps_16s_norm,
+  marker_label = "Prokaryotic Community",
+  group_var = "Condition",
+  interaction_var = "Wheat",
+  replicate_var = "Replicate",
+  treatment_levels = c("Optimum", "Drought", "Heat", "Drought+Heat")
+)
+
+# View the plot and PERMANOVA
+result$plot
+result$permanova
+
 
 ```
